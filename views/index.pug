@@ -1,0 +1,39 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  body
+    nav.navbar.navbar-expand.bg-dark.navbar-dark
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='home') 
+            i.fa.fa-home
+            |  Home
+        li.nav-item
+          a.nav-link(href='docs')
+            i.fa.fa-file-word-o
+            |  Documentos
+        li.nav-item
+          a.nav-link(href='#') 
+           i.fa.fa-plane
+           |  
+           i.fa.fa-building-o
+           |  
+           i.fa.fa-building-o
+           |  Alguma coisa
+      button.btn.btn-outline-secundary(type='button', onclick="location.href= '/logoff'") 
+        i.fa.fa-sign-out
+        |  Logoff
+    .container
+      h2  Editor de Texto
+      hr
+      form(method='post', action='salvar')
+        .form-group
+          textarea#text.form-control(name='texto', rows='10', placeholder='Comente suas espectativas')= content       
+        button.btn.btn-success(type='submit') Salvar
